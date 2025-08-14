@@ -81,7 +81,7 @@ public enum DutyCycle
     Duty75     // 75%
 }
 
-public class MidiToWaveConverter
+public class Midi2Chiptune
 {
     // デューティサイクルの値を取得
     private static double GetDutyCycleValue(DutyCycle duty)
@@ -586,7 +586,7 @@ class Program
 
                 if (File.Exists(midiFile))
                 {
-                    return MidiToWaveConverter.ConvertMidiToWav(midiFile, outputFile, tempo) ? 0 : 1;
+                    return Midi2Chiptune.ConvertMidiToWav(midiFile, outputFile, tempo) ? 0 : 1;
                 }
                 else
                 {
@@ -598,7 +598,7 @@ class Program
             {
                 Console.WriteLine("使用方法: program.exe <MIDIファイル> [出力WAVファイル] [テンポ]");
                 Console.WriteLine("デモファイルを生成します...");
-                MidiToWaveConverter.GenerateDemoNESMusic();
+                Midi2Chiptune.GenerateDemoNESMusic();
                 return 0;
             }
         }
