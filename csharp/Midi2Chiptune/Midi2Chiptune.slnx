@@ -1,5 +1,3 @@
 <Solution>
-  <Folder Name="/Midi2Chiptune/">
-    <Project Path="Midi2Chiptune.csproj" />
-  </Folder>
+  <Project Path="Midi2Chiptune.csproj" />
 </Solution>
