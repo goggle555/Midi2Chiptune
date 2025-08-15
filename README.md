@@ -4,12 +4,13 @@ MIDIデータをNES(ファミコン)の音源をエミュレートしたWAVEデ�
 
 以下の言語の実装とコンパイルオプションが含まれています。
 
-|言語|バージョン|非同期処理|AOTコンパイル|単一ファイル|
-|---|---|---|---|---|
-|C#|.NET 9|❌|✅|✅|
-|F#|.NET 9|❌|❌|✅|
-|Go|1.25.0|❌|✅|✅|
-|Nim|2,2,4|❌|✅|✅|
+|言語|バージョン|非同期処理|AOTコンパイル|単一ファイル|コンパイル最適化|静的リンク有効化|
+|---|---|---|---|---|---|---|
+|C#|.NET 9|❌|✅|✅|❌|❌|
+|F#|.NET 9|❌|❌|✅|❌|❌|
+|Go|1.25.0|❌|✅|✅|❌|❌|
+|Nim|2,2,4|❌|✅|✅|❌|❌|
+|Rust|1.89.0|❌|✅|✅|✅|❌|
 
 ## C#
 
@@ -59,4 +60,18 @@ go build -o ./publish/golang/Midi2Chiptune ./golang/main.go
 
 ```shell
 nim c -d:release nim/src/midi2chiptune.nim
+```
+
+## Rust
+
+### Run
+
+```shell
+cargo run --manifest-path rust/midi2chiptune/Cargo.toml ./dragon_quest_overture.mid ./dragon_quest_overture.rs.wav
+```
+
+### Compile
+
+```shell
+cargo build --release --manifest-path ./rust/midi2chiptune/Cargo.toml --target-dir ./publish/rust
 ```

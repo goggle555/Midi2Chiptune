@@ -1,0 +1,12 @@
+[package]
+name = "Midi2Chiptune"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[profile.release]
+opt-level = "z"   # サイズ最適化
+lto = "thin"      # 薄いリンクタイム最適化
+debug = false     # デバッグ情報の削除
+panic = "abort"   # パニック時にアボート
