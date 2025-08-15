@@ -9,6 +9,7 @@ MIDIデータをNES(ファミコン)の音源をエミュレートしたWAVEデ�
 |C#|.NET 9|❌|✅|✅|
 |F#|.NET 9|❌|❌|✅|
 |Go|1.25.0|❌|✅|✅|
+|Nim|2,2,4|❌|✅|✅|
 
 ## C#
 
@@ -50,4 +51,12 @@ go run ./golang/main.go ./dragon_quest_overture.mid ./dragon_quest_overture.go.w
 
 ```shell
 go build -o ./publish/golang/Midi2Chiptune ./golang/main.go
+```
+
+## Nim
+
+### Compile
+
+```shell
+nim c -d:release nim/src/midi2chiptune.nim
 ```
