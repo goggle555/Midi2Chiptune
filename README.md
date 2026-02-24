@@ -7,6 +7,7 @@ MIDIデータをNES(ファミコン)の音源をエミュレートしたWAVEデ�
 |言語|バージョン|非同期処理|AOTコンパイル|単一ファイル|コンパイル最適化|静的リンク有効化|
 |---|---|---|---|---|---|---|
 |C#|.NET 9|❌|✅|✅|❌|❌|
+|Dart|3.x|❌|✅|✅|❌|❌|
 |F#|.NET 9|❌|❌|✅|❌|❌|
 |Go|1.25.0|❌|✅|✅|❌|❌|
 |Nim|2,2,4|❌|✅|✅|❌|❌|
@@ -24,6 +25,20 @@ dotnet run --project ./csharp/Midi2Chiptune ./dragon_quest_overture.mid ./dragon
 
 ```shell
 dotnet publish ./csharp/Midi2Chiptune -o ./publish/csharp
+```
+
+## Dart
+
+### Run
+
+```shell
+dart run ./dart/bin/midi2chiptune.dart ./dragon_quest_overture.mid ./dragon_quest_overture.dart.wav
+```
+
+### Compile
+
+```shell
+dart compile exe ./dart/bin/midi2chiptune.dart -o ./publish/dart/Midi2Chiptune
 ```
 
 ## F#

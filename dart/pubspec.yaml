@@ -1,0 +1,7 @@
+name: midi2chiptune
+description: MIDIをNES風チップチューンWAVに変換するCLI
+version: 1.0.0
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+executables:
+  midi2chiptune: midi2chiptune
